@@ -24,9 +24,29 @@
                         <label for="email">E-mail</label>
                     </div>
                     <div class="inputBox">
-                        <input type="password" name="senha" id="senha" class="inputUser" required>
-                        <label for="senha">Senha</label>
+                        <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                        <label for="cpf">CPF</label>
                     </div>
+                    <div class="inputBox">
+                        <input type="text" name="rg" id="rg" class="inputUser" required>
+                        <label for="rg">RG</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="nit" id="nit" class="inputUser" required>
+                        <label for="nit">NIT (PIS/PASEP)</label>
+                    </div>
+                    <!--Telefone-->
+                    <fieldset>
+                        <legend><b>Telefone:</b></legend>
+                        <div class="inputBox">
+                            <input type="text" name="celular" id="celular" placeholder="(00) 00000-0000" class="inputUser" required>
+                            <label for="celular">Celular</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="residencial" id="residencial" placeholder="(00) 0000-0000" class="inputUser" required>
+                            <label for="residencial">Residencial</label>
+                        </div>
+                    </fieldset>
                     <!--Genero-->
                     <p><b>Sexo:</b></p>
                     <input type="radio" name="genero" id="feminino" value="feminino" required>
@@ -43,7 +63,7 @@
                     <!--Endereço-->
                     <fieldset class="endereco">
                         <form method="get" action=".">
-                            <legend><b>Endereço</b></legend>
+                            <legend><b>Endereço:</b></legend>
                             <div class="inputBox">
                                 <input type="text" name="cep" id="cep" value="" size="10" maxlength="9" placeholder="00000-000" onblur="pesquisacep(this.value);" class="inputUser">
                                 <label for="cep">CEP</label>
@@ -73,6 +93,30 @@
                                 <label for="uf">UF</label>
                             </div>
                         </form>
+                    </fieldset>
+                    <!--Cargos-->
+                    <fieldset>
+                        <legend><b>Cargos:</b></legend>
+                        <div class="inputBox">
+                            <input type="radio" name="escriturario" id="escriturario" class="inputUser" required>
+                            <label for="escriturario">Escriturário</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="radio" name="estagiario" id="estagiario" class="inputUser" required>
+                            <label for="estagiario">Estagiário</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="radio" name="aprendiz" id="aprendiz" class="inputUser" required>
+                            <label for="aprendiz">Aprendiz</label>
+                        </div>
+                    </fieldset>
+                    <!--Departamento/Setor-->
+                    <fieldset>
+                        <legend><b>Departamento</b></legend>
+                        <div class="inputBox">
+                            <input type="radio" name="administracao" Administração="administracao" Administração="inputUser" required>
+                            <label for="administracao">Administração</label>
+                        </div>
                     </fieldset>
                 </form>
             </fieldset>
