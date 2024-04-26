@@ -1,0 +1,115 @@
+/*Importações*/
+@import url("https://use.typekit.net/zya4itg.css");
+@import url("https://use.typekit.net/zya4itg.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    font-family: "acumin-pro", sans-serif;
+    background: linear-gradient(#01152665, #03354065), url("../img/background-form.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    scrollbar-width: thin;
+    scrollbar-color: #7B8C86 #011526;
+}bock::-webkit-scrollbar{
+    border: 1px solid #7B8C86;
+    border-radius: 20px;
+}
+
+.box{
+    top: 5%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: #011526d2;
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+    color: #F2E8DC;
+}
+
+.cadastro{
+    border: 8px solid #033540;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.cadastro-legenda{
+    border: 1px solid #033540;
+    padding: 10px;
+    text-align: center;
+    background-color: #033540;
+    border-radius: 10px;
+}
+.inputBox{
+    position: relative;   
+}
+.inputUser{
+    background-color: #7B8C8675;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #7B8C86;
+    outline: none;
+    width: 50%;
+    color: #F2E8DC;
+    padding: 5px;
+    font-size: 15px;
+}
+.labelInput{
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: #7B8C86;
+}
+.inputUserCEP{
+    background-color: #7B8C8675;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #7B8C86;
+    outline: none;
+    width: 25%;
+    color: #F2E8DC;
+    padding: 5px;
+    font-size: 15px;
+}
+.labelInputCEP{
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUserCEP:focus ~ .labelInputCEP,
+.inputUserCEP:valid ~ .labelInputCEP{
+    top: -20px;
+    font-size: 12px;
+    color: #7B8C86;
+}
+
+fieldset{
+    border: 3px solid #033540;
+    border-radius: 15px;
+    padding: 15px;
+}
+legend{
+    border: none solid #033540;
+    padding: 5px;
+    background-color: #033540;
+    border-radius: 10px;
+}
