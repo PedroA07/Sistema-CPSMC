@@ -6,7 +6,8 @@
     <title>Cadastro</title>
     <!--Links-->
     <link rel="stylesheet" type="text/css" href="../css/cadastro_funcionario.css">
-    <script src="../js/busca_cep.js"></script>
+    <script src="../js/script_busca-cep.js"></script>
+    <script defer src="../js/script_cargo-hidden.js"></script>
 </head>
 <body>
     <div class="box">
@@ -14,108 +15,156 @@
             <fieldset class="cadastro">
                 <legend class="cadastro-legenda"><b>CADASTRO</b></legend>
                 <form action="cadastro.php" method="post">
-                    <!--Dados Pessoais-->
-                    <div class="inputBox">
-                        <input type="text" name="nome" id="nome" class="inputUser" required>
-                        <label for="nome" class="labelInput">Nome Completo</label>
-                    </div>
-                    <br>
-                    <div class="inputBox">
-                        <input type="email" name="email" id="email" class="inputUser" required>
-                        <label for="email" class="labelInput">E-mail</label>
-                    </div>
-                    <br>
-                    <div class="inputBox">
-                        <input type="text" name="cpf" id="cpf" class="inputUser" required>
-                        <label for="cpf" class="labelInput">CPF</label>
-                    </div>
-                    <br>
-                    <div class="inputBox">
-                        <input type="text" name="rg" id="rg" class="inputUser" required>
-                        <label for="rg" class="labelInput">RG</label>
-                    </div>
-                    <br>
-                    <div class="inputBox">
-                        <input type="text" name="nit" id="nit" class="inputUser" required>
-                        <label for="nit" class="labelInput">NIT (PIS/PASEP)</label>
-                    </div>
-                    <br>
-                    <!--Telefone-->
-                    <fieldset>
-                        <legend><b>Telefone:</b></legend>
-                        <div class="inputBox">
-                            <input type="text" name="celular" id="celular" class="inputUser" required>
-                            <label for="celular" class="labelInput">Celular</label>
+                    <section class="dados_pessoais">
+                        <div class="nome_email">
+                            <!--Dados Pessoais-->
+                            <div class="inputBox">
+                                <input type="text" name="nome" id="nome" class="inputUser" required>
+                                <label for="nome" class="labelInput">Nome Completo</label>
+                            </div>
+                            <br>
+                            <div class="inputBox">
+                                <input type="email" name="email" id="email" class="inputUser" required>
+                                <label for="email" class="labelInput">E-mail</label>
+                            </div>
                         </div>
-                        <br>
-                        <div class="inputBox">
-                            <input type="text" name="residencial" id="residencial" class="inputUser" required>
-                            <label for="residencial" class="labelInput">Residencial</label>
+                        <div class="docmentos">
+                            <div class="inputBox">
+                                <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                                <label for="cpf" class="labelInput">CPF</label>
+                            </div>
+                            <br>
+                            <div class="inputBox">
+                                <input type="text" name="rg" id="rg" class="inputUser" required>
+                                <label for="rg" class="labelInput">RG</label>
+                            </div>
+                            <br>
+                            <div class="inputBox">
+                                <input type="text" name="nit" id="nit" class="inputUser" required>
+                                <label for="nit" class="labelInput">NIT (PIS/PASEP)</label>
+                            </div>
                         </div>
-                    </fieldset>
-                    <!--Genero-->
-                    <p><b>Sexo:</b></p>
-                    <input type="radio" name="genero" id="feminino" value="feminino" required>
-                    <label for="feminino">Feminino</label>
-                    <input type="radio" name="genero" id="masculino" value="masculino" required>
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" name="genero" id="outro" value="outro" required>
-                    <label for="outro">Outro</label>
-                    <!--Data de Nascimento-->
-                    <div class="inputBox">
-                        <label for="data_nascimento"><b>Data de Nascimento:</b></label>
-                        <input type="date" name="data_nascimento" id="data_nascimento" required>
-                    </div>
+                    </section>
+                    <section class="telefone">
+                        <!--Telefone-->
+                        <fieldset>
+                            <legend><b>Telefone:</b></legend>
+                            <div class="inputTel">
+                                <div>
+                                    <div class="inputBox">
+                                        <input type="text" name="celular" id="celular" class="inputUser" required>
+                                        <label for="celular" class="labelInput">Celular</label>
+                                    </div>
+                                </div>
+                                <br>
+                                <div>
+                                    <div class="inputBox">
+                                        <input type="text" name="residencial" id="residencial" class="inputUser" required>
+                                        <label for="residencial" class="labelInput">Residencial</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </section>
+                    <section>
+                        <div class="div_genero">
+                            <!--Genero-->
+                            <p><b>Sexo:</b></p>
+                            <input type="radio" name="genero" id="feminino" value="feminino" class="custom" required>
+                            <label for="feminino">Feminino</label>
+                            <br>
+                            <input type="radio" name="genero" id="masculino" value="masculino" class="custom" required>
+                            <label for="masculino">Masculino</label>
+                            <br>
+                            <input type="radio" name="genero" id="outro" value="outro" class="custom" required>
+                            <label for="outro">Outro</label>
+                        </div>
+                        <div class="div_nasc">
+                            <!--Data de Nascimento-->
+                            <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                            <input type="date" name="data_nascimento" id="data_nascimento" required>
+                        </div>
+                    </section class="endereco">
                     <!--Endereço-->
                     <fieldset class="endereco">
                         <form method="get" action=".">
                             <legend><b>Endereço:</b></legend>
-                            <div class="inputBox">
-                                <input type="text" name="cep" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" class="inputUserCEP">
-                                <label for="cep" class="labelInputCEP">CEP</label>
+                            <div>
+                                <div class="inputBox">
+                                    <label for="cep" class="labelInputCEP">CEP:</label>
+                                    <input type="text" name="cep" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" class="inputUserCEP">
+                                </div>
+                                <br>
+                                <div class="inputBox">
+                                    <input type="text" name="logradouro" id="logradouro" size="40" class="inputUser" required>
+                                    <label for="logradouro" class="labelInput">Logradouro</label>
+                                </div>
+                                <br>
+                                <div>
+                                    <div class="inputEndereco">
+                                        <div class="inputBox">
+                                            <input type="text" name="numero" id="numero" class="inputUser_Num" required>
+                                            <label for="numero" class="labelInput">Número</label>
+                                        </div>
+                                        <br>
+                                        <div class="inputBox">
+                                            <input type="text" name="complemento" id="complemento" class="inputUser_Comp" required>
+                                            <label for="complemento" class="labelInput">Complemento</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="inputBox">
-                                <input type="text" name="logradouro" id="logradouro" size="40" class="inputUser" required>
-                                <label for="logradouro" class="labelInput">Logradouro</label>
-                            </div>
-                            <br>
-                            <div class="inputBox">
-                                <input type="text" name="numero" id="numero" class="inputUser" required>
-                                <label for="numero" class="labelInput">Número</label>
-                            </div>
-                            <br>
-                            <div class="inputBox">
-                                <input type="text" name="complemento" id="complemento" class="inputUser" required>
-                                <label for="complemento" class="labelInput">Complemento</label>
-                            </div>
-                            <br>
-                            <div class="inputBox">
-                                <input type="text" name="bairro" id="bairro" class="inputUser" required>
-                                <label for="bairro" class="labelInput">Bairro</label>
-                            </div>
-                            <br>
-                            <div class="inputBox">
-                                <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                                <label for="cidade" class="labelInput">Cidade</label>
-                            </div>
-                            <br>
-                            <div class="inputBox">
-                                <input type="text" name="uf" id="uf" class="inputUser" required>
-                                <label for="uf" class="labelInput">UF</label>
+                            <div>
+                                <div class="inputBox">
+                                    <input type="text" name="bairro" id="bairro" class="inputUser" required>
+                                    <label for="bairro" class="labelInput">Bairro</label>
+                                </div>
+                                <br>
+                                <div class="inputBox">
+                                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                                    <label for="cidade" class="labelInput">Cidade</label>
+                                </div>
+                                <br>
+                                <div class="inputBox">
+                                    <input type="text" name="uf" id="uf" class="inputUser_Num" required>
+                                    <label for="uf" class="labelInput">UF</label>
+                                </div>
                             </div>
                         </form>
                     </fieldset>
                     <!--Cargos-->
+                    <section class="section-cargo">
                     <fieldset>
                         <legend><b>Cargos:</b></legend>
-                        <input type="radio" name="cargo" id="escriturario" value="escriturario" required>
-                        <label for="escriturario">Escriturário</labe>
-                        <input type="radio" name="cargo" id="estagiario" value="estagiario" required>
-                        <label for="estagiario">Estagiário</labe>
-                        <input type="radio" name="cargo" id="aprendiz" value="aprendiz" required>
-                        <label for="aprendiz">Aprendiz</labe>
+                        <div class="radio">
+                            <input type="radio" name="custom_field[account][1]" id="escriturario" value="escriturario" required>
+                            <label for="escriturario">Escriturário</labe>
+                            <br>
+                            <input type="radio" name="custom_field[account][1]" id="estagiario" value="estagiario" required>
+                            <label for="estagiario">Estagiário</labe>
+                            <br>
+                            <input type="radio" name="custom_field[account][1]" id="aprendiz" value="aprendiz" required>
+                            <label for="aprendiz">Aprendiz</labe>
+                            
+                            <div>
+                                <label for="input-custom-field1" class="form-control"><b>Ativo Desde:</b></label>
+                                <input type="date" name="cargo" id="input-custom-field1" class="form-control" value="" required>
+                                <label for="input-custom-field2" class="form-control"><b>Inativo Desde:</b></label>
+                                <input type="date" name="cargo" id="input-custom-field2" class="form-control" value="" required>
+
+                                <label for="input-custom-field3" class="form-control"><b>Início do Contrato:</b></label>
+                                <input type="date" name="cargo" id="input-custom-field3" class="form-control" value="" required>
+                                <label for="input-custom-field4" class="form-control"><b>Fim do Contrato:</b></label>
+                                <input type="date" name="cargo" id="input-custom-field4" class="form-control" value="" required>
+
+                                <label for="input-custom-field5" class="form-control"><b>Início do Contrato:</b></label>
+                                <input type="date" name="cargo" id="input-custom-field5" class="form-control" value="" required>
+                                <label for="input-custom-field6"class="form-control"><b>Fim do Contrato:</b></label>
+                                <input type="date" name="cargo" id="input-custom-field6" class="form-control" value="" required>
+                            </div>
+                        </div>
                     </fieldset>
+                    </section>
                     <!--Departamentos Independentes-->
                     <fieldset>
                         <legend><b>Departamentos Independentes:</b></legend>

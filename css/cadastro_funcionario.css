@@ -53,13 +53,73 @@ html, body{
 .inputBox{
     position: relative;   
 }
+
+.dados_pessoais{
+    margin: 0px;
+    padding: 10px;
+    grid-gap: 12px;
+}
+.telefone{    
+    margin: 0px;
+    padding: 10px;
+    grid-gap: 12px;   
+}
+.inputTel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+    grid-gap: 12px;
+}
+.endereco{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 20px;
+    grid-gap: 12px;
+}
+.inputUser_Num{
+    background-color: #7B8C8675;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #7B8C86;
+    outline: none;
+    width: 100px;
+    color: #F2E8DC;
+    padding: 5px;
+    font-size: 15px;
+}
+.inputUser_Comp{
+    background-color: #7B8C8675;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #7B8C86;
+    outline: none;
+    width: 150px;
+    color: #F2E8DC;
+    padding: 5px;
+    font-size: 15px;
+}
+.inputEndereco{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+    grid-gap: 12px;
+}
 .inputUser{
     background-color: #7B8C8675;
     border: none;
     border-radius: 8px;
     border-bottom: 1px solid #7B8C86;
     outline: none;
-    width: 50%;
+    width: 280px;
     color: #F2E8DC;
     padding: 5px;
     font-size: 15px;
@@ -71,8 +131,8 @@ html, body{
     pointer-events: none;
     transition: .5s;
 }
-.inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput{
+.inputUser:focus ~ .labelInput, .inputTel:focus ~ .labelInput, .inputUser_Num:focus ~ .labelInput, .inputUser_Comp:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput, .inputTel:valid ~ .labelInput, .inputUser_Num:valid ~ .labelInput, .inputUser_Comp:valid ~ .labelInput{
     top: -20px;
     font-size: 12px;
     color: #7B8C86;
@@ -83,23 +143,10 @@ html, body{
     border-radius: 8px;
     border-bottom: 1px solid #7B8C86;
     outline: none;
-    width: 25%;
+    width: 120px;
     color: #F2E8DC;
     padding: 5px;
     font-size: 15px;
-}
-.labelInputCEP{
-    position: absolute;
-    top: 1px;
-    left: 10px;
-    pointer-events: none;
-    transition: .5s;
-}
-.inputUserCEP:focus ~ .labelInputCEP,
-.inputUserCEP:valid ~ .labelInputCEP{
-    top: -20px;
-    font-size: 12px;
-    color: #7B8C86;
 }
 
 fieldset{
@@ -112,4 +159,65 @@ legend{
     padding: 5px;
     background-color: #033540;
     border-radius: 10px;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+.div_genero{
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 24px;
+    grid-gap: 3px;
+}
+input[type='radio'] {
+    accent-color: #7B8C86;
+}
+.div_nasc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 24px;
+    grid-gap: 3px;
+}
+#data_nascimento{
+    background-color: #7B8C8675;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #7B8C86;
+    outline: none;
+    color: #F2E8DC;
+    padding: 5px;
+    font-size: 15px;    
+    text-transform: uppercase;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(87%) sepia(17%) saturate(275%) hue-rotate(331deg) brightness(109%) contrast(90%);
+}
+
+.section-cargo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 24px;
+    grid-gap: 3px;
+}
+.radio{
+    align-items: center;
+    justify-content: space-around;
+    padding-inline: 24px;
+    grid-gap: 3px;
+}
+.countainer-estagio{
+    display: none;
+}
+input.form-control, label.form-control {
+	display: none;
 }
