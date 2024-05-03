@@ -209,15 +209,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-left: 24px;
     grid-gap: 3px;
 }
-.radio{
+.select{
     align-items: center;
     justify-content: space-around;
     padding-inline: 24px;
     grid-gap: 3px;
-}
-.countainer-estagio{
-    display: none;
-}
-input.form-control, label.form-control {
-	display: none;
 }

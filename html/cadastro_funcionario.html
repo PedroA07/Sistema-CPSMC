@@ -7,7 +7,7 @@
     <!--Links-->
     <link rel="stylesheet" type="text/css" href="../css/cadastro_funcionario.css">
     <script src="../js/script_busca-cep.js"></script>
-    <script defer src="../js/script_cargo-hidden.js"></script>
+    <script src="../js/script_cargo-hidden.js"></script>
 </head>
 <body>
     <div class="box">
@@ -136,32 +136,19 @@
                     <section class="section-cargo">
                     <fieldset>
                         <legend><b>Cargos:</b></legend>
-                        <div class="radio">
-                            <input type="radio" name="custom_field[account][1]" id="escriturario" value="escriturario" required>
-                            <label for="escriturario">Escriturário</labe>
+                        <div class="select">
+                            <select id="cargo" onchange="exibir_ocultar(this)">
+                                <option value="cargo_selecao">Selecione um Cargo</option>
+                                <option value="cargo_escriturario">Escriturario</option>
+                                <option value="cargo_estagiario">Estagiário</option>
+                                <option value="cargo_aprendiz">Aprendiz</option>
+                            </select>
                             <br>
-                            <input type="radio" name="custom_field[account][1]" id="estagiario" value="estagiario" required>
-                            <label for="estagiario">Estagiário</labe>
-                            <br>
-                            <input type="radio" name="custom_field[account][1]" id="aprendiz" value="aprendiz" required>
-                            <label for="aprendiz">Aprendiz</labe>
-                            
-                            <div>
-                                <label for="input-custom-field1" class="form-control"><b>Ativo Desde:</b></label>
-                                <input type="date" name="cargo" id="input-custom-field1" class="form-control" value="" required>
-                                <label for="input-custom-field2" class="form-control"><b>Inativo Desde:</b></label>
-                                <input type="date" name="cargo" id="input-custom-field2" class="form-control" value="" required>
-
-                                <label for="input-custom-field3" class="form-control"><b>Início do Contrato:</b></label>
-                                <input type="date" name="cargo" id="input-custom-field3" class="form-control" value="" required>
-                                <label for="input-custom-field4" class="form-control"><b>Fim do Contrato:</b></label>
-                                <input type="date" name="cargo" id="input-custom-field4" class="form-control" value="" required>
-
-                                <label for="input-custom-field5" class="form-control"><b>Início do Contrato:</b></label>
-                                <input type="date" name="cargo" id="input-custom-field5" class="form-control" value="" required>
-                                <label for="input-custom-field6"class="form-control"><b>Fim do Contrato:</b></label>
-                                <input type="date" name="cargo" id="input-custom-field6" class="form-control" value="" required>
-                            </div>
+                            <div  class="cargo_style" id="cargo_1_ativo">Ativo Desde: <input type="date"></div>
+                            <div class="cargo_style" id="cargo_2_inicio">Inicio do Contrato: <input type="date"></div>
+                            <div class="cargo_style" id="cargo_2_fim">Fim do Contrato: <input type="date"></div>
+                            <div class="cargo_style" id="cargo_3_inicio">Innicio do Contrato: <input type="date"></div>
+                            <div class="cargo_style" id="cargo_3_fim">Fim do Contrato: <input type="date"></div>
                         </div>
                     </fieldset>
                     </section>

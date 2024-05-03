@@ -1,14 +1,27 @@
-$(document).ready(function() {
-    $('input:radio[name="custom_field[account][1]"]').on("change", function() {
-        if (this.checked && this.value == '0') {
-            $("#input-custom-field1, #input-custom-field2").show();
-            $("#input-custom-field3, #input-custom-field4, #input-custom-field5, #input-custom-field6").hide();
-        } if (this.checked && this.value == '1') {
-            $("#input-custom-field3, #input-custom-field4").show();
-            $("#input-custom-field1, #input-custom-field2, #input-custom-field5, #input-custom-field6").hide();
-        } else {
-            $("#input-custom-field5, #input-custom-field6").show();
-            $("#input-custom-field1, #input-custom-field2, #input-custom-field3, #input-custom-field4").hide();
-        }
-    });
-});
+function exibir_ocultar(val) {
+    if(val.value == 'cargo_selecao') {
+        document.getElementById('cargo_1_ativo').style.display = 'none';
+        document.getElementById('cargo_2_inicio').style.display = 'none';
+        document.getElementById('cargo_2_fim').style.display = 'none';
+        document.getElementById('cargo_3_inicio').style.display = 'none';
+        document.getElementById('cargo_3_fim').style.display = 'none';
+    } else if (val.value == 'cargo_escriturario') {
+        document.getElementById('cargo_1_ativo').style.display = 'block';
+        document.getElementById('cargo_2_inicio').style.display = 'none';
+        document.getElementById('cargo_2_fim').style.display = 'none';
+        document.getElementById('cargo_3_inicio').style.display = 'none';
+        document.getElementById('cargo_3_fim').style.display = 'none';
+    } else if (val.value == 'cargo_estagiario') {
+        document.getElementById('cargo_1_ativo').style.display = 'none';
+        document.getElementById('cargo_2_inicio').style.display = 'block';
+        document.getElementById('cargo_2_fim').style.display = 'block';
+        document.getElementById('cargo_3_inicio').style.display = 'none';
+        document.getElementById('cargo_3_fim').style.display = 'none';
+    } else {
+        document.getElementById('cargo_1_ativo').style.display = 'none';
+        document.getElementById('cargo_2_inicio').style.display = 'none';
+        document.getElementById('cargo_2_fim').style.display = 'none';
+        document.getElementById('cargo_3_inicio').style.display = 'block';
+        document.getElementById('cargo_3_fim').style.display = 'block';
+    }
+};
