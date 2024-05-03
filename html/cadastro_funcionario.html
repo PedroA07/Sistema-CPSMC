@@ -7,7 +7,7 @@
     <!--Links-->
     <link rel="stylesheet" type="text/css" href="../css/cadastro_funcionario.css">
     <script src="../js/script_busca-cep.js"></script>
-    <script src="../js/script_cargo-hidden.js"></script>
+    <script src="../js/script_cargos-e-departamentos.js"></script>
 </head>
 <body>
     <div class="box">
@@ -146,80 +146,88 @@
                             <br><br>
                             <div  class="cargo_style" id="cargo_1_ativo">
                                 <label for="cargo_1_ativo"><b>Ativo Desde: </b></label>
-                                <input class="inputUser_cargo" type="date">
+                                <input class="inputUser_cargo" type="date" id="cargo_1_ativo" name="cargo_1_ativo">
                             </div>
                             <div class="cargo_style" id="cargo_2_inicio">
                                 <label for="cargo_2_inicio"><b>Inicio do Contrato: </b></label>
                                 <br>
-                                <input class="inputUser_cargo" type="date">
+                                <input class="inputUser_cargo" type="date" id="cargo_2_inicio" name="cargo_2_inicio">
                             </div>
                             <div class="cargo_style" id="cargo_2_fim">
                                 <label for="cargo_2_fim"><b>Fim do Contrato: </b></label>
                                 <br>
-                                <input class="inputUser_cargo" type="date">
+                                <input class="inputUser_cargo" type="date" id="cargo_2_fim" name="cargo_2_fim">
                             </div>
                             <div class="cargo_style" id="cargo_3_inicio">
                                 <label for="cargo_3_inicio"><b>Inicio do Contrato: </b></label>
                                 <br>
-                                <input class="inputUser_cargo" type="date">
+                                <input class="inputUser_cargo" type="date" id="cargo_3_inicio" name="cargo_3_inicio">
                             </div>
                             <div class="cargo_style" id="cargo_3_fim">
                                 <label for="cargo_3_fim"><b>Fim do Contrato: </b></label>
                                 <br>
-                                <input class="inputUser_cargo" type="date" id="cargo_3_fim" name="cargo_3_fim" required>
+                                <input class="inputUser_cargo" type="date" id="cargo_3_fim" name="cargo_3_fim">
                             </div>
                         </div>
                     </fieldset>
                     </section>
-                    <!--Departamentos Independentes-->
-                    <fieldset>
-                        <legend><b>Departamentos Independentes:</b></legend>
-                        <div class="dp_indp">
-                            <input type="radio" name="dep_ind" id="superintendente" value="superintendente" required>
-                            <label for="superintendente">Gabinete de Superintendência</labe>
-                            <input type="radio" name="dep_ind" id="assessoria_juridica" value="assessoria_juridica" required>
-                            <label for="assessoria_juridica">Assessoria Jurídica</labe>
-                            <input type="radio" name="dep_ind" id="assessoria_tecnica" value="assessoria_tecnica" required>
-                            <label for="assessoria_tecnica">Assessoria Técnica</labe>
-                            <input type="radio" name="dep_ind" id="procuradoria_juridica" value="procuradoria_juridica" required>
-                            <label for="procuradoria_juridica">Procuradoria Jurídica</labe>
-                        </div>
-                    </fieldset>
-                    <!--Departamento/Setor-->
+                    <!--Departamentos-->
                     <fieldset>
                         <legend><b>Departamentos:</b></legend>
-                        <input type="radio" name="dep" id="administracao" value="administracao" required>
-                        <label for="administracao">Administração</labe>
-                        <input type="radio" name="dep" id="beneficios" value="beneficios" required>
-                        <label for="beneficios">Benefícios</labe>
-                        <input type="radio" name="dep" id="contabilidade" value="contabilidade" required>
-                        <label for="contabilidade">Contabilidade</labe>
-                        <input type="radio" name="dep" id="financas" value="financas" required>
-                        <label for="financas">Finanças</labe>
-                        <input type="radio" name="dep" id="material" value="material" required>
-                        <label for="material">Material</labe>
-                        <input type="radio" name="dep" id="saude" value="saude" required>
-                        <label for="saude">Saúde</labe>
                         <div>
-                            <fieldset>
-                                <legend><b>Setores:</b></legend>
-                                <input type="radio" name="setor" id="arquivo" value="arquivo" required>
+                            <select class="select_style" id="departamento" onchange="exibir_ocultar_setor(this)">
+                                <option value="selecao">Selecione um Departamento</option>
+                                <option value="administracao">Administrção</option>
+                                <option value="assessoria_juridica">Assessoria Jurídica</option>
+                                <option value="assessoria_tecnica">Assessoria Técnica</option>
+                                <option value="beneficios">Benefícios</option>
+                                <option value="contabilidade">Contabilidade</option>
+                                <option value="financas">Finanças</option>
+                                <option value="superintendencia">Gabinete de Superintendência</option>
+                                <option value="materiais">Materiais</option>
+                                <option value="procuradoria_juridica">Procuradoria Jurídica</option>
+                                <option value="saude">Saúde</option>
+                            </select>
+                            <br><br>
+                            <!--Setores-->
+                            <legend><b>Setores:</b></legend>
+                            <br>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="arquivo">    
                                 <label for="arquivo">Arquivo</label>
-                                <input type="radio" name="setor" id="assistente_social" value="assistente_social" required>
+                            </div>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="assistente_social">    
                                 <label for="assistente_social">Assistente Social</label>
-                                <input type="radio" name="setor" id="faturamento" value="faturamento" required>
+                            </div>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="faturamento">    
                                 <label for="faturamento">Faturamento</label>
-                                <input type="radio" name="setor" id="odontologico" value="odontologico" required>
+                            </div>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="financeiro">    
+                                <label for="financeiro">Financeiro</label>
+                            </div>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="odontologico">    
                                 <label for="odontologico">Odontológico</label>
-                                <input type="radio" name="setor" id="protocolo" value="protocolo" required>
+                            </div>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="protocolo">    
                                 <label for="protocolo">Protocolo</label>
-                                <input type="radio" name="setor" id="processamento_de_dados" value="processamento_de_dados" required>
+                            </div>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="processamento_de_dados">    
                                 <label for="processamento_de_dados">Processamento de Dados</label>
-                                <input type="radio" name="setor" id="recursos_humanos" value="recursos_humanos" required>
+                            </div>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="recursos_humanos">    
                                 <label for="recursos_humanos">Recursos Humanos</label>
-                                <input type="radio" name="setor" id="servicos_gerais" value="servicos_gerais" required>
+                            </div>
+                            <div class="hidden">
+                                <input type="radio" name="setor" id="servicos_gerais">    
                                 <label for="servicos_gerais">Serviços Gerais</label>
-                            </fieldset>
+                            </div>
                         </div>
                     </fieldset>
                 </form>

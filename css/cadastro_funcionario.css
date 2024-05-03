@@ -218,12 +218,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     grid-gap: 3px;
 }
 .select_style{
-    background-color: #7B8C86;
+    background-color: #03354095;
     border: none;
     border-radius: 8px;
     border-bottom: 1px solid #7B8C86;
     outline: none;
-    color: #033540;
+    color: #F2E8DC;
     padding: 5px;
     font-size: 15px;    
     text-transform: uppercase;
@@ -245,11 +245,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 15px;    
     text-transform: uppercase;
 }
-.dp_indp{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: 24px;
-    grid-gap: 3px;
-}
+.hidden {
+    display: none;
+  }
+      
+  .show{
+    display: block; /* Utilize !important caso ocorra conflito */
+  }
