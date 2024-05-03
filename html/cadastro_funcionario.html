@@ -137,32 +137,53 @@
                     <fieldset>
                         <legend><b>Cargos:</b></legend>
                         <div class="select">
-                            <select id="cargo" onchange="exibir_ocultar(this)">
+                            <select class="select_style" id="cargo" onchange="exibir_ocultar(this)">
                                 <option value="cargo_selecao">Selecione um Cargo</option>
                                 <option value="cargo_escriturario">Escriturario</option>
                                 <option value="cargo_estagiario">Estagiário</option>
                                 <option value="cargo_aprendiz">Aprendiz</option>
                             </select>
-                            <br>
-                            <div  class="cargo_style" id="cargo_1_ativo">Ativo Desde: <input type="date"></div>
-                            <div class="cargo_style" id="cargo_2_inicio">Inicio do Contrato: <input type="date"></div>
-                            <div class="cargo_style" id="cargo_2_fim">Fim do Contrato: <input type="date"></div>
-                            <div class="cargo_style" id="cargo_3_inicio">Innicio do Contrato: <input type="date"></div>
-                            <div class="cargo_style" id="cargo_3_fim">Fim do Contrato: <input type="date"></div>
+                            <br><br>
+                            <div  class="cargo_style" id="cargo_1_ativo">
+                                <label for="cargo_1_ativo"><b>Ativo Desde: </b></label>
+                                <input class="inputUser_cargo" type="date">
+                            </div>
+                            <div class="cargo_style" id="cargo_2_inicio">
+                                <label for="cargo_2_inicio"><b>Inicio do Contrato: </b></label>
+                                <br>
+                                <input class="inputUser_cargo" type="date">
+                            </div>
+                            <div class="cargo_style" id="cargo_2_fim">
+                                <label for="cargo_2_fim"><b>Fim do Contrato: </b></label>
+                                <br>
+                                <input class="inputUser_cargo" type="date">
+                            </div>
+                            <div class="cargo_style" id="cargo_3_inicio">
+                                <label for="cargo_3_inicio"><b>Inicio do Contrato: </b></label>
+                                <br>
+                                <input class="inputUser_cargo" type="date">
+                            </div>
+                            <div class="cargo_style" id="cargo_3_fim">
+                                <label for="cargo_3_fim"><b>Fim do Contrato: </b></label>
+                                <br>
+                                <input class="inputUser_cargo" type="date" id="cargo_3_fim" name="cargo_3_fim" required>
+                            </div>
                         </div>
                     </fieldset>
                     </section>
                     <!--Departamentos Independentes-->
                     <fieldset>
                         <legend><b>Departamentos Independentes:</b></legend>
-                        <input type="radio" name="dep_ind" id="superintendente" value="superintendente" required>
-                        <label for="superintendente">Gabinete de Superintendência</labe>
-                        <input type="radio" name="dep_ind" id="assessoria_juridica" value="assessoria_juridica" required>
-                        <label for="assessoria_juridica">Assessoria Jurídica</labe>
-                        <input type="radio" name="dep_ind" id="assessoria_tecnica" value="assessoria_tecnica" required>
-                        <label for="assessoria_tecnica">Assessoria Técnica</labe>
-                        <input type="radio" name="dep_ind" id="procuradoria_juridica" value="procuradoria_juridica" required>
-                        <label for="procuradoria_juridica">Procuradoria Jurídica</labe>
+                        <div class="dp_indp">
+                            <input type="radio" name="dep_ind" id="superintendente" value="superintendente" required>
+                            <label for="superintendente">Gabinete de Superintendência</labe>
+                            <input type="radio" name="dep_ind" id="assessoria_juridica" value="assessoria_juridica" required>
+                            <label for="assessoria_juridica">Assessoria Jurídica</labe>
+                            <input type="radio" name="dep_ind" id="assessoria_tecnica" value="assessoria_tecnica" required>
+                            <label for="assessoria_tecnica">Assessoria Técnica</labe>
+                            <input type="radio" name="dep_ind" id="procuradoria_juridica" value="procuradoria_juridica" required>
+                            <label for="procuradoria_juridica">Procuradoria Jurídica</labe>
+                        </div>
                     </fieldset>
                     <!--Departamento/Setor-->
                     <fieldset>

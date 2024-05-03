@@ -210,8 +210,46 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     grid-gap: 3px;
 }
 .select{
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding-inline: 24px;
+    grid-gap: 3px;
+}
+.select_style{
+    background-color: #7B8C86;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #7B8C86;
+    outline: none;
+    color: #033540;
+    padding: 5px;
+    font-size: 15px;    
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.cargo_style{
+    display: none;
+    padding-inline: 12px;
+    grid-gap: 3px;
+}
+.inputUser_cargo{
+    background-color: #7B8C8675;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #7B8C86;
+    outline: none;
+    color: #F2E8DC;
+    padding: 5px;
+    font-size: 15px;    
+    text-transform: uppercase;
+}
+.dp_indp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 24px;
     grid-gap: 3px;
 }
