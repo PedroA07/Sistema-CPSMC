@@ -133,7 +133,7 @@ function exibir_ocultar_setor(val){
         document.getElementById('stpd').style.display = 'none';
         document.getElementById('strh').style.display = 'none';
         document.getElementById('stsg').style.display = 'none';
-    } else if (val.value == 'saude'){
+    } else {
         document.getElementById('setor').style.display = 'block';
         document.getElementById('starq').style.display = 'none';
         document.getElementById('aj').style.display = 'none';
@@ -146,6 +146,6 @@ function exibir_ocultar_setor(val){
         document.getElementById('stpd').style.display = 'none';
         document.getElementById('strh').style.display = 'none';
         document.getElementById('stsg').style.display = 'none';
-    }
+    };
     
 };
