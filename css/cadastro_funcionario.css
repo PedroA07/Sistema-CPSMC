@@ -206,7 +206,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-left: 24px;
+    margin-left: 12px;
     grid-gap: 3px;
 }
 .select{
@@ -247,8 +247,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .hidden {
     display: none;
-  }
+    margin-top: 10px;
+}
       
-  .show{
+.show{
     display: block; /* Utilize !important caso ocorra conflito */
-  }
+}

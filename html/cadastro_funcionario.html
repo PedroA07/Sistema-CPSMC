@@ -137,8 +137,8 @@
                     <fieldset>
                         <legend><b>Cargos:</b></legend>
                         <div class="select">
-                            <select class="select_style" id="cargo" onchange="exibir_ocultar(this)">
-                                <option value="cargo_selecao">Selecione um Cargo</option>
+                            <select class="select_style" id="cargo" onchange="exibir_ocultar(this)" required>
+                                <option value="cargo_selecao" selected>Selecione um Cargo</option>
                                 <option value="cargo_escriturario">Escriturario</option>
                                 <option value="cargo_estagiario">Estagiário</option>
                                 <option value="cargo_aprendiz">Aprendiz</option>
@@ -172,64 +172,45 @@
                     </fieldset>
                     </section>
                     <!--Departamentos-->
-                    <fieldset>
-                        <legend><b>Departamentos:</b></legend>
-                        <div>
-                            <select class="select_style" id="departamento" onchange="exibir_ocultar_setor(this)">
-                                <option value="selecao">Selecione um Departamento</option>
-                                <option value="administracao">Administrção</option>
-                                <option value="assessoria_juridica">Assessoria Jurídica</option>
-                                <option value="assessoria_tecnica">Assessoria Técnica</option>
-                                <option value="beneficios">Benefícios</option>
-                                <option value="contabilidade">Contabilidade</option>
-                                <option value="financas">Finanças</option>
-                                <option value="superintendencia">Gabinete de Superintendência</option>
-                                <option value="materiais">Materiais</option>
-                                <option value="procuradoria_juridica">Procuradoria Jurídica</option>
-                                <option value="saude">Saúde</option>
-                            </select>
-                            <br><br>
-                            <!--Setores-->
-                            <legend><b>Setores:</b></legend>
-                            <br>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="arquivo">    
-                                <label for="arquivo">Arquivo</label>
+                    <section class="section-cargo">
+                        <fieldset>
+                            <legend><b>Departamentos:</b></legend>
+                            <div>
+                                <select class="select_style" id="departamento" onchange="exibir_ocultar_setor(this)" required>
+                                    <option value="selecao" selected>Selecione um Departamento</option>
+                                    <option value="administracao">Administrção</option>
+                                    <option value="beneficios">Benefícios</option>
+                                    <option value="contabilidade">Contabilidade</option>
+                                    <option value="financas">Finanças</option>
+                                    <option value="gestao_de_qualidade">Gestão de Qualidade</option>
+                                    <option value="superintendencia">Gabinete de Superintendência</option>
+                                    <option value="materiais">Materiais</option>
+                                    <option value="procuradoria_juridica">Procuradoria Jurídica</option>
+                                    <option value="saude">Saúde</option>
+                                </select>
+                                
+                                <!--Setores-->
+                                <fieldset class="hidden" id="setor">
+                                    <legend><b>Setores:</b></legend>
+                                    <select name="setor" id="setor" class="select_style" onchange="exibir_ocultar_setor(this)">
+                                        <option value="setor_selecao" selected>Selecione um Setor</option>
+                                        <option value="setor_arquivo" id="starq">Arquivo</option>
+                                        <option value="setor_assessoria_juridica" id="aj">Assessoria Jurídica</option>
+                                        <option value="setor_assessoria_tecnica" id="at">Assessoria Técnica</option>
+                                        <option value="setor_assistente_social" id="sas">Assistente Social</option>
+                                        <option value="setor_faturamento" id="staf">Faturamento</option>
+                                        <option value="setor_tesouraria" id="stte">Tesouraria</option>
+                                        <option value="setor_odontologico" id="stod">Odontológico</option>
+                                        <option value="setor_protocolo" id="stpr">Protocolo</option>
+                                        <option value="setor_processamento_de_dados" id="stpd">Processamento de Dados</option>
+                                        <option value="setor_recursos_humanos" id="strh">Recursos Humanos</option>
+                                        <option value="setor_servicos_gerais" id="stsg">Serviços Gerais</option>
+                                    </select>
+                                </fieldset>
+                                
                             </div>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="assistente_social">    
-                                <label for="assistente_social">Assistente Social</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="faturamento">    
-                                <label for="faturamento">Faturamento</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="financeiro">    
-                                <label for="financeiro">Financeiro</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="odontologico">    
-                                <label for="odontologico">Odontológico</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="protocolo">    
-                                <label for="protocolo">Protocolo</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="processamento_de_dados">    
-                                <label for="processamento_de_dados">Processamento de Dados</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="recursos_humanos">    
-                                <label for="recursos_humanos">Recursos Humanos</label>
-                            </div>
-                            <div class="hidden">
-                                <input type="radio" name="setor" id="servicos_gerais">    
-                                <label for="servicos_gerais">Serviços Gerais</label>
-                            </div>
-                        </div>
-                    </fieldset>
+                        </fieldset>
+                    </section>
                 </form>
             </fieldset>
         </form>
