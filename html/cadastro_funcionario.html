@@ -41,12 +41,12 @@
                             </div>
                             <br>
                             <div class="inputBox">
-                                <input type="text" name="rg" id="rg" class="inputUser" oninput="mascara_rg(this)" required>
+                                <input type="text" name="rg" id="rg" class="inputUser_RG" oninput="mascara_rg(this)" required>
                                 <label for="rg" class="labelInput">RG</label>
                             </div>
                             <br>
                             <div class="inputBox">
-                                <input type="text" name="nit" id="nit" class="inputUser" required>
+                                <input type="text" name="nit" id="nit" class="inputUser" oninput="mascara_nit(this)" required>
                                 <label for="nit" class="labelInput">NIT (PIS/PASEP)</label>
                             </div>
                         </div>
@@ -58,14 +58,14 @@
                             <div class="inputTel">
                                 <div>
                                     <div class="inputBox">
-                                        <input type="text" name="celular" id="celular" class="inputUser" required>
+                                        <input type="text" name="celular" id="celular" class="inputUser" onkeyup="mascara_telefone_celular(event)" required>
                                         <label for="celular" class="labelInput">Celular</label>
                                     </div>
                                 </div>
                                 <br>
                                 <div>
                                     <div class="inputBox">
-                                        <input type="text" name="residencial" id="residencial" class="inputUser" required>
+                                        <input type="text" name="residencial" id="residencial" class="inputUser" oninput="mascara_telefone_residencial(event)" required>
                                         <label for="residencial" class="labelInput">Residencial</label>
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@
                             <legend><b>Departamentos:</b></legend>
                             <div>
                                 <select class="select_style" id="departamento" onchange="exibir_ocultar_setor(this)" required>
-                                    <option value="selecao" selected>Selecione um Departamento</option>
+                                    <option value="departamento_selecao" selected>Selecione um Departamento</option>
                                     <option value="administracao">Administrção</option>
                                     <option value="beneficios">Benefícios</option>
                                     <option value="contabilidade">Contabilidade</option>
