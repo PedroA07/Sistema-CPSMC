@@ -20,11 +20,6 @@
                         <div class="nome_email">
                             <!--Dados Pessoais-->
                             <div class="inputBox">
-                                <input type="text" name="matricula" id="matricula" class="inputUser" required>
-                                <label for="nome" class="labelInput">Matrícula</label>
-                            </div>
-                            <br>
-                            <div class="inputBox">
                                 <input type="text" name="nome" id="nome" class="inputUser" required>
                                 <label for="nome" class="labelInput">Nome Completo</label>
                             </div>
@@ -58,14 +53,14 @@
                             <div class="inputTel">
                                 <div>
                                     <div class="inputBox">
-                                        <input type="text" name="celular" id="celular" class="inputUser" onkeyup="mascara_telefone_celular(event)" required>
+                                        <input type="text" name="celular" id="celular" class="inputUser" onkeyup="mascara_telefone_celular(event)" maxlength="15" required>
                                         <label for="celular" class="labelInput">Celular</label>
                                     </div>
                                 </div>
                                 <br>
                                 <div>
                                     <div class="inputBox">
-                                        <input type="text" name="residencial" id="residencial" class="inputUser" oninput="mascara_telefone_residencial(event)" required>
+                                        <input type="text" name="residencial" id="residencial" class="inputUser" oninput="mascara_telefone_residencial(event)" maxlength="15" required>
                                         <label for="residencial" class="labelInput">Residencial</label>
                                     </div>
                                 </div>
@@ -151,6 +146,11 @@
                             </select>
                             <br><br>
                             <div  class="cargo_style" id="cargo_1_ativo">
+                                <div class="inputBox">
+                                    <input type="text" name="matricula" id="matricula" class="inputUser">
+                                    <label for="nome" class="labelInput">Matrícula</label>
+                                </div>
+                                <br>
                                 <label for="cargo_1_ativo"><b>Ativo Desde: </b></label>
                                 <input class="inputUser_cargo" type="date" id="cargo_1_ativo" name="cargo_1_ativo">
                             </div>
@@ -198,7 +198,7 @@
                                 <!--Setores-->
                                 <fieldset class="hidden" id="setor">
                                     <legend><b>Setores:</b></legend>
-                                    <select name="setor" id="setor" class="select_style" onchange="exibir_ocultar_setor(this)">
+                                    <select name="setor" id="setor" class="select_style">
                                         <option value="setor_selecao" selected>Selecione um Setor</option>
                                         <option value="setor_arquivo" id="starq">Arquivo</option>
                                         <option value="setor_assessoria_juridica" id="aj">Assessoria Jurídica</option>
@@ -213,7 +213,6 @@
                                         <option value="setor_servicos_gerais" id="stsg">Serviços Gerais</option>
                                     </select>
                                 </fieldset>
-                                
                             </div>
                         </fieldset>
                     </section>

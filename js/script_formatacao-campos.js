@@ -30,12 +30,12 @@ function mascara_rg(i) {
 // Máscara do NIT(PIS/PASEP)
 function mascara_nit(i) {
     var v = i.value;
-
-    if (/[^\d.]/.test(v[v.length - 1])) { // impede entrar outro caractere que não seja número ou ponto
-        i.value = v.substring(0, v.length - 1);
-        return;
+    
+    if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+       i.value = v.substring(0, v.length-1);
+       return;
     }
-
+    
     i.setAttribute("maxlength", "17");
     if (v.length == 2 || v.length == 6) i.value += ".";
     if (v.length == 10) i.value += "/";

@@ -143,8 +143,8 @@ html, body{
     pointer-events: none;
     transition: .5s;
 }
-.inputUser:focus ~ .labelInput, .inputTel:focus ~ .labelInput, .inputUser_Num:focus ~ .labelInput, .inputUser_Comp:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput, .inputTel:valid ~ .labelInput, .inputUser_Num:valid ~ .labelInput, .inputUser_Comp:valid ~ .labelInput{
+.inputUser:focus ~ .labelInput, .inputTel:focus ~ .labelInput, .inputUser_Num:focus ~ .labelInput, .inputUser_Comp:focus ~ .labelInput, .inputUser_RG:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput, .inputTel:valid ~ .labelInput, .inputUser_Num:valid ~ .labelInput, .inputUser_Comp:valid ~ .labelInput, .inputUser_RG:valid ~ .labelInput{
     top: -20px;
     font-size: 12px;
     color: #7B8C86;
