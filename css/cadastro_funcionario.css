@@ -136,6 +136,18 @@ html, body{
     font-size: 15px;
     text-transform: uppercase;
 }
+.inputUser_Matricula{
+    background-color: #7B8C8675;
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #7B8C86;
+    outline: none;
+    width: 100px;
+    color: #F2E8DC;
+    padding: 5px;
+    font-size: 15px;    
+    text-transform: uppercase;
+}
 .labelInput{
     position: absolute;
     top: 1px;

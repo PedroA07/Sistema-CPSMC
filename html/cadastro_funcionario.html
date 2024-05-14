@@ -93,7 +93,7 @@
                             <div>
                                 <div class="inputBox">
                                     <label for="cep" class="labelInputCEP">CEP:</label>
-                                    <input type="text" name="cep" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" class="inputUserCEP">
+                                    <input type="text" name="cep" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" oninput="mascara_cep(this)" class="inputUserCEP">
                                 </div>
                                 <br>
                                 <div class="inputBox">
@@ -147,8 +147,8 @@
                             <br><br>
                             <div  class="cargo_style" id="cargo_1_ativo">
                                 <div class="inputBox">
-                                    <input type="text" name="matricula" id="matricula" class="inputUser">
-                                    <label for="nome" class="labelInput">Matrícula</label>
+                                    <label for="cargo_1_ativo"><b>Matrícula: </b></label>
+                                    <input type="text" name="matricula" id="matricula" class="inputUser_Matricula" oninput="mascara_matricula(this)">
                                 </div>
                                 <br>
                                 <label for="cargo_1_ativo"><b>Ativo Desde: </b></label>

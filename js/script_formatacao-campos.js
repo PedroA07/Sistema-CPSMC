@@ -43,7 +43,7 @@ function mascara_nit(i) {
 }
 
 // Máscara de Telefones
-//Celular
+// Celular
 const mascara_telefone_celular = (event) => {
     let input = event.target
     input.value = celMask(input.value)
@@ -68,4 +68,30 @@ const mascara_telefone_residencial = (event) => {
     value = value.replace(/(\d{2})(\d)/,"($1) $2")
     value = value.replace(/(\d)(\d{4})$/,"$1-$2")
     return value
+}
+// Máscara de Matrícula
+function mascara_matricula(i) {
+    var v = i.value;
+
+    if (isNaN(v[v.length - 1])) { // impede entrar outro caractere que não seja número
+        i.value = v.substring(0, v.length - 1);
+        return;
+    }
+
+    i.setAttribute("maxlength", "8");
+    if (v.length == 2) i.value += ".";
+    if (v.length == 6) i.value += "-";
+}
+// Máscara de CEP
+function mascara_cep(i) {
+    var v = i.value;
+
+    if (isNaN(v[v.length - 1])) { // impede entrar outro caractere que não seja número
+        i.value = v.substring(0, v.length - 1);
+        return;
+    }
+
+    i.setAttribute("maxlength", "10");
+    if (v.length == 2) i.value += ".";
+    if (v.length == 6) i.value += "-";
 }
