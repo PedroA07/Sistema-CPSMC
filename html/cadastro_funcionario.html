@@ -21,12 +21,12 @@
                     <section class="dados_pessoais">
                         <div class="nome_email">
                             <div class="inputBox"> <!-- Inicio Campo Nome -->
-                                <input id="nome" name="nome" type="text" class="inputUser" required>
+                                <input id="nome" name="nome" type="text" maxlength="45" class="inputUser" required>
                                 <label for="nome" class="labelInput">Nome Completo</label>
                             </div> <!-- Fim Compo Nome-->
                             <br>
                             <div class="inputBox"> <!-- Inicio Campo e-mail -->
-                                <input id="email" name="email" type="email" class="inputUser" required autocomplete="email">
+                                <input id="email" name="email" type="email" maxlength="150" class="inputUser" required autocomplete="email">
                                 <label for="email" class="labelInput">E-mail</label>
                             </div> <!-- Fim Campo e-mail -->
                         </div>
@@ -128,14 +128,14 @@
                                     <div class="inputEndereco">
                                         <!-- Inicio Campo Número -->
                                         <div class="inputBox">
-                                            <input id="numero" name="numero" type="text" class="inputUser_Num" required>
+                                            <input id="numero" name="numero" type="text" maxlength="6" class="inputUser_Num" required>
                                             <label for="numero" class="labelInput">Número</label>
                                         </div>
                                         <!-- Fim Campo Número -->
                                         <br>
                                         <!-- Inicio Campo Complemento -->
                                         <div class="inputBox">
-                                            <input id="complemento" name="complemento" type="text" class="inputUser_Comp" required>
+                                            <input id="complemento" name="complemento" type="text" maxlength="45" class="inputUser_Comp" required>
                                             <label for="complemento" class="labelInput">Complemento</label>
                                         </div>
                                         <!-- Fim Campo Complemento -->
