@@ -18,12 +18,18 @@ function exibir_ocultar(val) {
         document.getElementById('cargo_2_fim').style.display = 'block';
         document.getElementById('cargo_3_inicio').style.display = 'none';
         document.getElementById('cargo_3_fim').style.display = 'none';
-    } else {
+    } else if (val.value == 'cargo_aprendiz'){
         document.getElementById('cargo_1_ativo').style.display = 'none';
         document.getElementById('cargo_2_inicio').style.display = 'none';
         document.getElementById('cargo_2_fim').style.display = 'none';
         document.getElementById('cargo_3_inicio').style.display = 'block';
         document.getElementById('cargo_3_fim').style.display = 'block';
+    }else {
+        document.getElementById('cargo_1_ativo').style.display = 'block';
+        document.getElementById('cargo_2_inicio').style.display = 'none';
+        document.getElementById('cargo_2_fim').style.display = 'none';
+        document.getElementById('cargo_3_inicio').style.display = 'none';
+        document.getElementById('cargo_3_fim').style.display = 'none';
     }
 };
 
